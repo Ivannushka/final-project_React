@@ -1,6 +1,12 @@
 import {NavLink} from 'react-router-dom';
 import '../Visual/Css/style.css';
 import image1 from  '../Visual/Images/churros.jpg';
+import objects from  '../Visual/Images/objects.jpg';
+import tram from  '../Visual/Images/tram.jpg';
+import redSubmarine from  '../Visual/Images/redSubmarine.jpg';
+import aircraft1 from  '../Visual/Images/aircraft1.jpg';
+import submarine from  '../Visual/Images/submarine.jpg';
+
 import article1 from '../Visual/Images/robocat.png';
 import article2 from '../Visual/Images/tankGirl.jpg';
 import article3 from '../Visual/Images/kitty1.jpg';
@@ -52,7 +58,7 @@ function Home() {
         )
     })
 
-
+    
     return (
 <div className="container">
             <div className="row">
@@ -63,10 +69,22 @@ function Home() {
                                 <img src={image1} className="d-block w-100" alt="..." />
                             </div>
                             <div className="carousel-item">
-                                <img src="https://picsum.photos/800/300" className="d-block w-100" alt="..." />
+                                <img src={objects} className="d-block w-100" alt="..." />
                             </div>
                             <div className="carousel-item">
-                                <img src="https://picsum.photos/800/300" className="d-block w-100" alt="..." />
+                                <img src={tram} className="d-block w-100" alt="..." />
+                            </div>
+                            <div className="carousel-item">
+                                <img src={redSubmarine} className="d-block w-100" alt="..." />
+                            </div>
+                            <div className="carousel-item">
+                                <img src={tram} className="d-block w-100" alt="..." />
+                            </div>
+                            <div className="carousel-item">
+                                <img src={aircraft1} className="d-block w-100" alt="..." />
+                            </div>
+                            <div className="carousel-item">
+                                <img src={submarine} className="d-block w-100" alt="..." />
                             </div>
                         </div>
                         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

@@ -8,6 +8,7 @@ import AboutUs from './Views/AboutUs';
 import Page404 from './Views/Page404';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
+import Chat2 from './Views/Chat2';
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
 
                      <Route path="/chat">
                         <Chat />
+                    </Route>
+                    <Route path="/chat2">
+                        <Chat2 />
                     </Route>
                     <Route path="/register">
                         <Register />

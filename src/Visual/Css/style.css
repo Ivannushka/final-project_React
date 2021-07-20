@@ -261,6 +261,19 @@ img {
 .logout {
   float: right;
 }
+.list-style-type {
+  list-style-type: none;
+}
+.chatbox {
+  text-align: left;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  background: #fff;
+  height: 270px;
+  border: 1px solid #acd8f0;
+  overflow-x: auto;
+  overflow-y: auto;
+}
 /* ==========PAGE 5 FORM========== */
 .validateBtn {
   width: 120px;

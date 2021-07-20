@@ -6,24 +6,24 @@ function Form({someText}) {
     const [password, setPassword] = useState(someText);
     const [passwordRepeat, setPasswordRepeat] = useState(someText);
     const addText = () => {
-        if (text == '') {
-            alert('No name passed');
-            return;
-        } else if (password == '') {
-            alert("Please, enter your password")
-            return;
-        } else if  (passwordRepeat !== password) {
-            alert ('Passwords do not mach!')
-            return;
-        }
-    else if  (password.length < 9) {
-        alert ('Password should contain not less then 9 symbols')
-        return false;
-    }
-        // for (let i=0; i<=9; i++) {
-        //     if (text = i && i < 9); 
-        //     alert('Password should contain not less then 9 symbols')
-        // }
+    //     if (text == '') {
+    //         alert('No name passed');
+    //         return;
+    //     } else if (password == '') {
+    //         alert("Please, enter your password")
+    //         return;
+    //     } else if  (passwordRepeat !== password) {
+    //         alert ('Passwords do not mach!')
+    //         return;
+    //     }
+    // else if  (password.length < 9) {
+    //     alert ('Password should contain not less then 9 symbols')
+    //     return false;
+    // }
+    // else {
+    //     alert('Form has been sucessfully submitted')
+    // }
+ 
             setText('');
         setPassword('');
         setPasswordRepeat('');
@@ -31,7 +31,12 @@ function Form({someText}) {
     }
   
 let alertMessage = <h6></h6>
-if (text == '') {alertMessage = <h6 style={{color:'red'}}>Username must be filled</h6>
+if (text == '') {
+    return (<h6 style={{color:'red'}}>Username must be filled</h6>
+
+    )
+//     let alertMessage = <h6></h6>
+// if (text == '') {alertMessage = <h6 style={{color:'red'}}>Username must be filled</h6>
     
 } else if (password == '') {alertMessage = <h6 style={{color:'red'}}>Please, enter your paswword</h6>
 }  
@@ -92,7 +97,7 @@ else if (passwordRepeat !== password){ alertMessage = <h6 style={{color:'red'}}>
         <h5>Register</h5>
       {/* <form onsubmit="validateForm(event)" id="registerForm" className="formWithValidation" action="" name="forma" > */}
       <div>
-          {/* {alertMessage} */}
+          {alertMessage}
         <input type="text" id="register-username" value=""  className="field" placeholder= "Username*" name="user" value={text} onChange={updateText}/>
       </div>
 <div>
