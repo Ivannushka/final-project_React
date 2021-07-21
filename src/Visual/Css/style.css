@@ -1,67 +1,42 @@
-
 body {
   margin: 0;
-  background: rgb(222, 250, 255) !important; 
-/* 
+  background: rgb(222, 250, 255) !important;
+  /* 
   background: radial-gradient(rgb(245, 244, 244), #ffd6d6); */
   /* background: radial-gradient(rgb(166, 240, 230), #e1e9ec); */
   /* background: radial-gradient(rgb(245, 244, 244), #ffd6d6); */
 
   font-size: 16px;
-  font-family: New Tegomin;
+  font-family: New Tegomin !important;
   /* font-family: Dawning of a New Day; */
-  color: #733814;
+  color: #733814 !important;
 }
 * {
   box-sizing: border-box;
 }
-/* ===============NAVBAR BOO2 ========= */
-a,
-.breadcrumb
-.nav-link,
-.tabs 
-.active{
+.bordered1 {
+  border-bottom: 2px solid rgb(146, 123, 84);
+}
+.bordered2 {
+  border-top: 2px solid rgb(146, 123, 84) !important;
+  padding-top: 50px !important;
+}
+/* =============== NAVBAR  ========= */
+.breadcrumb .nav-link,
+.tabs .active {
   font-family: New Tegomin !important;
   /* color: rgb(180, 7, 74) !important;
   text-decoration: none !important; */
 }
-
 .nav-link.active {
   /* background-color: rgb(223, 9, 127) !important;
   color: rgb(58, 248, 67) !important; */
-  font-family: New Tegomin !important;
-}
-/* a:hover,
-.nav-link:hover,
-.tabs:hover {
-color: rgb(13, 207, 221) !important;  
-} */
-
-/* ======BREADCRUMB===== */
-li.breadcrumb-item.active {
-  font-family: New Tegomin !important;
+  /* font-family: New Tegomin !important; */
 }
 li.breadcrumb-item.active:before {
-  content: ">";
+  content: '>';
 }
-
-/* =========NAVIGATION========== */
-/* .navigation {
-  font-size: 15px;
-  font-weight: 700;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-nav {
-  padding: 10px 0 0 20px;
-}
-.linked {
-  color: rgb(146, 123, 84);
-  text-decoration: none;
-  margin-left: 20px;
-} */
-
-/* fFOR THE WHOLE SITE a, .page-link 2 page */
+/*======== NAVIGATION ========= */
 a,
 .page-link,
 .nav-link {
@@ -71,7 +46,7 @@ a:hover,
 .page-link:hover,
 .linked:hover {
   text-decoration: underline;
-  color: goldenrod;
+  color: goldenrod !important;
 }
 .disabled {
   pointer-events: none;
@@ -79,71 +54,31 @@ a:hover,
   opacity: 0.7;
 }
 .linked:active {
-  color: goldenrod !important; 
+  color: goldenrod !important;
 }
 .page-link {
   background: rgb(255, 246, 230) !important;
 }
-
-/* ===========BODY=============*/
-
-h4,
-h6 {
-  color: rgb(146, 123, 84);
-  font-weight: bolder;
+.breadcrumb > .active {
+  color: goldenrod !important;
 }
-.logo {
-  width: 50%;
+.nav-link.active {
+  background-color: goldenrod !important;
+  /* color: aqua !important; */
+  color: rgb(248, 255, 255) !important;
 }
-@media only screen and (max-width: 768px) {
-  .logo {
-    width: 70%;
-  }
-}
-img {
-  max-width: 100%;
-  height: auto;
-}
-/* CAROUSEl */
+/* ====== CAROUSEl ====== */
 .container {
   width: 90%;
   padding-top: 40px;
 }
-
-/* CARDS */
+/* ======== CARDS ======== */
 .col-md-4,
 .col-md-8 {
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgb(255, 246, 230);
-}
-
-/* =========FOOTER============= */
-
-/* .footer {
-  border-top: 2px solid rgb(146, 123, 84);
-  position: relative;
-}
-.footer-text {
-  font-size: 14px;
-  padding-top: 10px;
-  margin-inline-start: 10px;
-  max-width: 50%;
-}
-.col-md-4 {
-  padding: 5px;
-} */
-
-/* =========2 PAGE===========*/
-
-.breadcrumb > .active {
-  color: goldenrod;
-}
-/* container */
-.for-page-two {
-  padding: 0;
-  width: 100%;
 }
 .page2 {
   margin: 30px;
@@ -158,53 +93,7 @@ img {
   font-family: New Tegomin;
   color: #733814 !important;
 }
-.articleImage {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-@media only screen and (max-width: 700px) {
-  .articleImage {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-@media only screen and (max-width: 700px) {
-  .col-md-3,
-  .fo {
-    align-items: center;
-    justify-content: center;
-    text-align: justify;
-  }
-}
-@media only screen and (max-width: 700px) {
-  .articleHeader {
-    text-align: center;
-    margin-top: 10px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .articleImage {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-/* ==========PAGE 3=========== */
-
-.for-article {
-  padding-top: 0;
-}
-/* ARTICLE TEXT COLOR */
-.articleP {
-  text-align: justify;
-}
-.imgArt {
-  max-width: 100%;
-}
-/* ===========PAGE 4 CHAT============= */
-
+/* =========== CHAT ============= */
 .main {
   width: 100%;
   max-width: 1170px;
@@ -220,7 +109,6 @@ img {
   border-radius: 5px;
   background: #becfdd;
 }
-
 #wrapper {
   margin: 0 auto;
   padding-bottom: 25px;
@@ -274,7 +162,7 @@ img {
   overflow-x: auto;
   overflow-y: auto;
 }
-/* ==========PAGE 5 FORM========== */
+/* ========== FORM ========== */
 .validateBtn {
   width: 120px;
   height: 45px;
@@ -288,23 +176,12 @@ img {
   cursor: pointer;
   border-radius: 5px;
 }
-
 .field {
   margin: 10px;
   border: 1px solid #733814;
   border-radius: 5px;
 }
-/* ========PAGE 6 ABOUT US============ */
-.tab-content {
-  text-align: justify;
-}
-/* ==img== */
-.aboutUs {
-  width: 100%;
-}
-.nav-link.active {
-  background-color: goldenrod !important;
-}
+/* ======== ABOUT US ============ */
 .map-contacts {
   padding-top: 30;
   padding-bottom: 50px;

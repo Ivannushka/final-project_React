@@ -3,7 +3,6 @@ import Breadcrumbs from '../Components/Breadcrumbs';
 import Pagination from '../Components/Pagination';
 import articles from '../Components/Articles';
 import { SRLWrapper } from 'simple-react-lightbox';
-// import { useState } from 'react-router-dom';
 import { useState } from 'react';
 import madmax from '../Visual/Images/madmax.jpg';
 
@@ -18,7 +17,6 @@ function Article() {
   const breadcrumbPaths = [
     { link: '/', title: 'Home' },
     { link: '/articles', title: 'Articles' },
-    // { link: `/articles/${article.id}`, title: article.title },
     { title: article.title },
   ];
 
@@ -35,7 +33,6 @@ function Article() {
       </div>
     );
   });
-
   return (
     <div className="container">
       <div className="row">
@@ -51,9 +48,6 @@ function Article() {
       </div>
       <div className="row mb-5 pb-3">
         <div className="col-12 col-md-5">
-          {/* <NavLink to={'/categories/' + article.id}>
-                        <img className="img-fluid" src={article.image} />
-                    </NavLink> */}
           <div className="row">
             <div className="col">
               <img src={mainImage} className="img-fluid" />
