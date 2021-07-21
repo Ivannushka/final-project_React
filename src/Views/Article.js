@@ -13,7 +13,7 @@ function Article() {
     const { articleId } = useParams();
     const filteredArticles = articles.filter((article) => {return articleId == article.id});
     const article = filteredArticles[0];
-     const [mainImage, setMainImage] = useState(article.image);
+     const [mainImage, setMainImage] = useState(madmax);
     
      const breadcrumbPaths  = [
         { link: '/', title: 'Home' },

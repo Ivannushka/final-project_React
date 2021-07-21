@@ -2,8 +2,6 @@ import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import Breadcrumbs from '../Components/Breadcrumbs';
 import '../Visual/Css/style.css';
-import UserName from '../Components/UserName';
-
 
 function Chat2() {
 
@@ -11,43 +9,6 @@ function Chat2() {
         { link: '/', title: 'Home' },
         {  title: 'Chat' },
     ]
-
-    // const [newMessageName, setNewMessageName] = useState('');
-    // const [message, setMessage] = useState(['']);
-
-    // const [newUserName, setNewUserName] = useState('');
-    // const [user, setUser] = useState([
-    //     'Hello',
-    //     ]);
-
-
-    // const addMessage = () => {
-    //     if (newMessageName == '') {
-    //         alert(' Pleease, enter your message');
-    //         return;
-
-    //     } else  if (newUserName == '') {
-    //                     alert('No name passed');
-    //         return;
-    //             }
-  
-    //     setMessage([...message, newMessageName]);
-    //     setNewMessageName('');
-    //     setUser([...user, setNewUserName])
-    //     setNewUserName('');
-    // }
-    // const updateNewUserName = (event) => {
-    //     setNewUserName(event.target.value);
-    // }
- 
-    // const updateNewMessageName = (event) => {
-    //     setNewMessageName(event.target.value);
-    // }
- 
-
-    // const messageElements = message.map((item, index) => <div  key={index}>{item}</div>);
-    // const userElements = user.map((item, index) => <span key={index} id="#myName">{item}</span>);
-
     const [messages, setMessages] = useState([]);
     const [userNameInput, setUserNameInput] = useState('');
     const [messageInput, setMessageInput] = useState('');
@@ -56,83 +17,77 @@ function Chat2() {
       const newMessage = {
         text: messageInput,
         username: userNameInput,
-      }
+      } 
+      // if (messageInput == 0) {
+      //   alert ('Please, enter your message')
+      // }
+
       setMessages([...messages, newMessage])
       setMessageInput('');
+      setUserNameInput('')
     }
     
+    const updateUserInput =(event) => {
+      setUserNameInput(event.target.value)
+    }
+    const updateMessageInput =(event) => {
+      setMessageInput(event.target.value)
+    }
+
+
 const messageElements = messages.map((msg,index) => {
   return (
-    <li key={index}>
-    <div>
-      {msg.username}
+    <p key={index} id="welcome">
+      {/* <p key={index} id="welcome">Welcome, &nbsp;  */}
+    <span id="#myName">
+    {msg.username}
+      </span> 
+    <div id="chat-text">
+    {msg.text}
     </div>
-    <p>
-  {msg.text}
     </p>
-    </li>
+
   );
 })
 
-
- 
-{/* <li>
-<div>
-  {msg.username}
-</div>
-<p>
-{msg.text}
-</p>
-</li> */}
-
     return (
 
-     <div>
-       {/* <h1>Hello world {count}</h1> */}
-       <h1>Hello world </h1>
+         <div className=" container d-flex flex-column min-vh-100 main">
+               <div className="row mb-5">
+            <div className="col">
+            <Breadcrumbs paths={breadcrumbPaths} />
+                </div>
+            </div>
+        <div className="row flex-grow-1">
+      <div id="wrapper">
 
-     </div>
+      <div id="menu">
+      <p id="welcome">Welcome, 
+      {messages.username}
+        <span id="#myName"></span> 
+          <span className="logout">  
+         <NavLink to='/chat2/'>Exit Chat</NavLink>
+         </span>
+          </p>
+      <div id="chatbox">
+      {messageElements}
+  </div>
+  <div className="username">
+    <label for="name-input-field">Username:</label>
+    <input className= "chat" type="text"  placeholder= "Your Name" id="myName" onChange={updateUserInput}/>
+  </div>
+  <div className="write-field">
+    <input className= "chat" name="usermsg" type="text" id="usermsg" size="63" onChange={updateMessageInput}  />
+  </div>
+  <div className="send-button">
+      <label for="submitmsg">Comment:</label>
+    <button className = "chat-butn" name="submitmsg" type="submit"  id="submitmsg" onClick={sendMessage}>Send</button>
+  </div>
 
-      //    <div className=" container d-flex flex-column min-vh-100 main">
-      //          <div className="row mb-5">
-      //       <div className="col">
-      //       <Breadcrumbs paths={breadcrumbPaths} />
-      //           </div>
-      //       </div>
-      //   <div className="row flex-grow-1">
-      // <div id="wrapper">
-      // <div id="menu">
-      // {/* <form onsubmit="addMessage(event)" className="textUs" name="message" action=""> */}
-      //   {/* <UserName /> */}
-    
-      //   <p id="welcome">Welcome, 
-      //   {/* <span id="#myName"></span>  */}
-      //   {userElements}
-      //     <span className="logout">  
-      //    <NavLink to='/chat2/'>Exit Chat</NavLink>
-      //    </span>
-
-      //     </p>
-      // <div id="chatbox">
-      // {messageElements}
-      // </div>
-      // <div className="username">
-      //   <label for="name-input-field">Username:</label>
-      //   <input className= "chat" type="text" value={newUserName} placeholder= "Your Name" id="myName" onChange={updateNewUserName}/>
-      // </div>
-      // <div className="write-field">
-      //   <input className= "chat" name="usermsg" type="text" id="usermsg" size="63" onChange={updateNewMessageName}  />
-      // </div>
-      // <div className="send-button">
-      //     <label for="submitmsg">Comment:</label>
-      //   <input className = "chat-butn" name="submitmsg" type="submit"  id="submitmsg" value="Send" onClick={addMessage}/>
-      //   {/* <button onClick={addTask}>Add task</button> */}
-      // </div>
-      // </div>
-      // </div>
-      // {/* </form> */}
-      // </div>
-      // </div>
+  </div>
+      </div>
+      </div>
+      </div>
     )
 }
 export default Chat2;

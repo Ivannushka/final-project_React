@@ -9,6 +9,7 @@ import Page404 from './Views/Page404';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Chat2 from './Views/Chat2';
+import Template from './Views/Template';
 
 function App() {
   return (
@@ -37,6 +38,9 @@ function App() {
                     </Route>
                     <Route path="/chat2">
                         <Chat2 />
+                    </Route>
+                    <Route path="/template">
+                        <Template />
                     </Route>
                     <Route path="/register">
                         <Register />
