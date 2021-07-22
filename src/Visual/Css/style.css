@@ -1,15 +1,12 @@
 body {
   margin: 0;
   background: rgb(222, 250, 255) !important;
-  /* 
-  background: radial-gradient(rgb(245, 244, 244), #ffd6d6); */
-  /* background: radial-gradient(rgb(166, 240, 230), #e1e9ec); */
-  /* background: radial-gradient(rgb(245, 244, 244), #ffd6d6); */
-
   font-size: 16px;
   font-family: New Tegomin !important;
-  /* font-family: Dawning of a New Day; */
   color: #733814 !important;
+}
+.text{
+   text-align: justify;
 }
 * {
   box-sizing: border-box;
@@ -25,13 +22,6 @@ body {
 .breadcrumb .nav-link,
 .tabs .active {
   font-family: New Tegomin !important;
-  /* color: rgb(180, 7, 74) !important;
-  text-decoration: none !important; */
-}
-.nav-link.active {
-  /* background-color: rgb(223, 9, 127) !important;
-  color: rgb(58, 248, 67) !important; */
-  /* font-family: New Tegomin !important; */
 }
 li.breadcrumb-item.active:before {
   content: '>';

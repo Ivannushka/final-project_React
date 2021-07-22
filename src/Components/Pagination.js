@@ -1,7 +1,5 @@
 function Pagination() {
     return (
-        // <div className="d-flex p-2 bd-highlight justify-content-end">
-
         <nav aria-label="Page navigation">
             <ul className="pagination pagination-sm d-flex p-2 bd-highlight justify-content-end">
               <li className="page-item">
@@ -21,7 +19,6 @@ function Pagination() {
               </li>
             </ul>
           </nav>
-        // </div>
     )
 }
 export default Pagination;

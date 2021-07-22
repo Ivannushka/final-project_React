@@ -11,14 +11,13 @@ function Profile({ articles }) {
             className=" img-fluid about"
           />
         </div>
-        <div class="col-md-8">{articles.text}</div>
+        <div class="col-md-8 text">{articles.text}</div>
       </div>
     );
   });
 
   return (
     <div>{articlesTabs}</div>
-    //     <table className="table border border-dark"  >
   );
 }
 export default Profile;

@@ -10,14 +10,13 @@ function Contacts({ articles }) {
             className=" img-fluid about"
           />
         </div>
-        <div className="col-md-8">{articles.text}</div>
+        <div className="col-md-8 text">{articles.text}</div>
       </div>
     );
   });
 
   return (
     <div>{articlesTabs}</div>
-    //     <table className="table border border-dark"  >
   );
 }
 export default Contacts;

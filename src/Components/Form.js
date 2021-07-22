@@ -1,12 +1,12 @@
 import '../Visual/Css/style.css';
 import { useState } from 'react';
 
-function Form({ someText }) {
-  const [text, setText] = useState(someText);
-  const [password, setPassword] = useState(someText);
-  const [passwordRepeat, setPasswordRepeat] = useState(someText);
-  const [firstName, setFirstName] = useState(someText);
-  const [secondName, setSecondName] = useState(someText);
+function Form() {
+  const [text, setText] = useState('');
+  const [password, setPassword] = useState('');
+  const [passwordRepeat, setPasswordRepeat] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [secondName, setSecondName] = useState('');
 
   const addText = () => {
     if (text == '') {
@@ -52,6 +52,7 @@ function Form({ someText }) {
     setSecondName(event.target.value);
   };
 
+  
   return (
     <div className="row">
       <div className="col">
@@ -62,13 +63,11 @@ function Form({ someText }) {
           action=""
           name="forma">
           <div>
-            {/* {alertMessage} */}
             <input
               type="text"
               id="register-username"
               value=""
               className="field"
-            //   required
               placeholder="Username*"
               name="user"
               value={text}

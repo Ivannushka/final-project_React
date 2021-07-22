@@ -71,7 +71,6 @@ function AboutUs() {
       </div>
 
       <div class="map-contacts">
-        {/* <h2 class="find-us">Contacts</h2> */}
         <div class="row mt-5">
           <h2 class="find-us">Contacts</h2>
           <div class="col-sm-7">
@@ -88,7 +87,6 @@ function AboutUs() {
             <navLink to="/mail" class="info">
               steamyourself@gmail.com
             </navLink>
-
             <h5 class="contact-us"> Phone:</h5>
             <p class="info">+371 111 111</p>
           </div>

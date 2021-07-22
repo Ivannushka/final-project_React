@@ -8,13 +8,9 @@ import AboutUs from './Views/AboutUs';
 import Page404 from './Views/Page404';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
-import Chat2 from './Views/Chat2';
-import Template from './Views/Template';
 
 function App() {
   return (
-//     <div>
-// <h1 style={{color:"red"}}>Karmapa Chenno</h1>
 <div>
 <Router>
                 <Header />
@@ -29,18 +25,8 @@ function App() {
                     <Route path="/article/:articleId">
                         <Article />
                     </Route>
-                    {/* <Route path="/article/:categoryId/:productId">
-                        <Product />
-                    </Route> */}
-
                      <Route path="/chat">
                         <Chat />
-                    </Route>
-                    <Route path="/chat2">
-                        <Chat2 />
-                    </Route>
-                    <Route path="/template">
-                        <Template />
                     </Route>
                     <Route path="/register">
                         <Register />
@@ -55,7 +41,6 @@ function App() {
                 <Footer />
             </Router>
 </div>
-    // </div>
   );
 }
 

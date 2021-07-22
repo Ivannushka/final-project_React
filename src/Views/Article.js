@@ -57,7 +57,7 @@ function Article() {
             <div className="row">{imageThumbnails}</div>
           </SRLWrapper>
         </div>
-        <div className="col-12 col-md-7">
+        <div className="col-12 col-md-7 text ">
           <p className="text-muted">{article.description}</p>
         </div>
       </div>
